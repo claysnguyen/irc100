@@ -2,27 +2,48 @@
 
 ## Deploy
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/deploy` `[tick, total, lmt]`
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/deploy` `[tick, total, lim]`
+
+- `tick`: 名称
+- `total`: 总量
+- `lim`: mint限额
 
 ## Mint
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/mint` `[tick, lmt]`
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/mint` `[tick, lim]`
+
+- `tick`: 名称
+- `lim`: mint数量
 
 ## Transfer
 
 Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/transfer` `[tick, id, to]`
 
+- `tick`: 名称
+- `id`: irc-100的id
+- `to`: 接受者
+
 ## List
 
 Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/list` `[tick, id, price]`
+
+- `tick`: 名称
+- `id`: irc-100的id
+- `price`: 出售价格
 
 ## Unlist
 
 Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/unlist` `[tick, id]`
 
+- `tick`: 名称
+- `id`: irc-100的id
+
 ## Buy
 
 Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/buy` `[tick, id]`
+
+- `tick`: 名称
+- `id`: irc-100的id
 
 ## 监听
 
