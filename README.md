@@ -59,9 +59,9 @@ async function main() {
 main().catch(console.error);
 ```
 
-## 监听
+## monitor
 
-获取transaction的tx_receipt
+get transaction tx_receipt
 
 ### deploy
 
