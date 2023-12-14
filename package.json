@@ -1,0 +1,14 @@
+{
+  "name": "irc100",
+  "version": "1.0.0",
+  "description": "## Token Economic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "iost": "^0.1.22"
+  }
+}
