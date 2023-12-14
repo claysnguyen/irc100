@@ -26,6 +26,7 @@ See Actions below:
 
 ```typescript
 import iost from 'iost';
+import bs58 from 'bs58';
 
 const {IOST, RPC, HTTPProvider, Tx, KeyPair} = iost;
 
