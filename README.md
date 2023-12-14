@@ -28,7 +28,7 @@ async function main() {
   instance.setRPC(rpc);
 
   const account = new iost.Account("Input your name");
-  const kp = new KeyPair(bs58.decode(account.sec));
+  const kp = new KeyPair(bs58.decode("Your secret key"));
   account.addKeyPair(kp, "owner");
   account.addKeyPair(kp, "active");
   instance.setAccount(account);
