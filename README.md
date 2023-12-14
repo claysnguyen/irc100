@@ -59,7 +59,7 @@ async function main() {
 main().catch(console.error);
 ```
 
-## monitor
+## Monitor
 
 get transaction tx_receipt
 
