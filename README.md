@@ -6,25 +6,13 @@
 - Supply: `880000000`
 - limit: `1000`
 
-### Deploy
+See Actions below: 
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/deploy` `["IOSI", "880000", "1000"]`
-
-### Mint
-
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/mint` `["IOSI", "1000"]`
-
-### Transfer
-
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/transfer` `["IOSI", "1", "address"]`
-
-### List
-
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/list` `["IOSI", "1", "100"]`
-
-### Unlist
-
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/unlist` `["IOSI", "1"]`
+- Deploy: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/deploy` `["IOSI", "880000", "1000"]`
+- Mint: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/mint` `["IOSI", "1000"]`
+- Transfer: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/transfer` `["IOSI", "1", "address"]`
+- List: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/list` `["IOSI", "1", "100"]`
+- Unlist: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/unlist` `["IOSI", "1"]`
 
 ### Buy
 
