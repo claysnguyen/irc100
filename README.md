@@ -17,6 +17,13 @@ See Actions below:
 
 ## Mint with nodejs
 
+1. Install Node.js
+2. Create a directory,such as IRC100Mint
+3. Open IRC100Mint, execute command: `npm init`
+4. Execute command: `npm install iost`
+5. Create an index.js file,copy the code below
+6. Run: `node index.js`
+
 ```typescript
 import iost from 'iost';
 
