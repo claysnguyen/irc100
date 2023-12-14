@@ -2,7 +2,7 @@
 
 ## Token Economic
 
-- Token: `IOSI`
+- Token: `iOSI`
 - Supply: `880000000`
 - limit: `1000`
 
