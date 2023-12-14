@@ -1,49 +1,70 @@
-# irc100
+# irc100 protocol
 
-## Deploy
+## Token Economic
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/deploy` `[tick, total, lim]`
+- Token: `IOSI`
+- Supply: `880000000`
+- limit: `1000`
 
-- `tick`: 名称
-- `total`: 总量
-- `lim`: mint限额
+### Deploy
 
-## Mint
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/deploy` `["IOSI", "880000", "1000"]`
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/mint` `[tick, lim]`
+### Mint
 
-- `tick`: 名称
-- `lim`: mint数量
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/mint` `["IOSI", "1000"]`
 
-## Transfer
+### Transfer
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/transfer` `[tick, id, to]`
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/transfer` `["IOSI", "1", "address"]`
 
-- `tick`: 名称
-- `id`: irc-100的id
-- `to`: 接受者
+### List
 
-## List
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/list` `["IOSI", "1", "100"]`
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/list` `[tick, id, price]`
+### Unlist
 
-- `tick`: 名称
-- `id`: irc-100的id
-- `price`: 出售价格
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/unlist` `["IOSI", "1"]`
 
-## Unlist
+### Buy
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/unlist` `[tick, id]`
+Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/buy` `["IOSI", "1"]`
 
-- `tick`: 名称
-- `id`: irc-100的id
+## Mint with nodejs
 
-## Buy
+```typescript
+import iost from 'iost';
 
-Action: `Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx/buy` `[tick, id]`
+const {IOST, RPC, HTTPProvider, Tx, KeyPair} = iost;
 
-- `tick`: 名称
-- `id`: irc-100的id
+async function main() {
+  const rpc = new RPC(new HTTPProvider('http://18.209.137.246:30001'));
+  const instance = new IOST();
+  instance.setRPC(rpc);
+
+  const account = new iost.Account("Input your name");
+  const kp = new KeyPair(bs58.decode(account.sec));
+  account.addKeyPair(kp, "owner");
+  account.addKeyPair(kp, "active");
+  instance.setAccount(account);
+
+  const mintCount = 10; // max is 10, otherwise will killed
+  const tx = new Tx(1, buyCount * 45000);
+  tx.actions = Array.from({ length: mintCount }).map(() => ({
+    contract: 'Contract6vU3ZWL57jQeFpbuqUxQfL5PGeFJekWrDG2WVGjWqrKx',
+    actionName: 'mint',
+    data: JSON.stringify(['IOSI', '1000'])
+  }))
+  tx.amount_limit = [{
+    token: 'iost',
+    value: 'unlimited'
+  }];
+
+  instance.signAndSend(tx).on('pending', console.log).on('success', console.log).on('failed', console.error);
+}
+
+main().catch(console.error);
+```
 
 ## 监听
 
